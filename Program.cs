@@ -36,6 +36,7 @@ if (N1 > N2){
     }
 }
 
+
 //Задача 6
 Console.WriteLine("Введите число:");
 N1 = Convert.ToInt32(Console.ReadLine());
