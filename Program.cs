@@ -5,11 +5,14 @@ int N1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число:");
 int N2 = Convert.ToInt32(Console.ReadLine());
 
-
-if (N1 > N2){
-    Console.WriteLine("Первое число больше");
+if(N1 == N2){
+    Console.WriteLine("Числа равны.");
 }else{
-    Console.WriteLine("Второе число больше");
+    if (N1 > N2){
+        Console.WriteLine("Первое число больше");
+    }else{
+        Console.WriteLine("Второе число больше");
+    }
 }
 
 //Задача 4
@@ -22,17 +25,21 @@ N2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите третье число:");
 int N3 = Convert.ToInt32(Console.ReadLine());
 
-if (N1 > N2){
-    if(N1 > N3){
-        Console.WriteLine("Первое число больше");
-    }else{
-        Console.WriteLine("Третье число больше");
-    }
+if(N1 == N2 && N2 == N3){
+    Console.WriteLine("Числа равны.");
 }else{
-    if(N2 > N3){
-        Console.WriteLine("Второе число больше");
+    if (N1 > N2){
+        if(N1 > N3){
+            Console.WriteLine("Первое число больше");
+        }else{
+            Console.WriteLine("Третье число больше");
+        }
     }else{
-        Console.WriteLine("Третье число больше");
+        if(N2 > N3){
+            Console.WriteLine("Второе число больше");
+        }else{
+            Console.WriteLine("Третье число больше");
+        }
     }
 }
 
@@ -52,7 +59,7 @@ if(N1 % 2 == 0){
 Console.WriteLine("Введите число N:");
 N1 = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 0; i <= N1; i++){
+for (int i = 1; i <= N1; i++){
     Console.Write(i);
     Console.Write(" ");
 }
