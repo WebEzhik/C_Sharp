@@ -1,41 +1,57 @@
+﻿//Задача 2
+Console.WriteLine("Введите первое число:");
+int N1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите второе число:");
+int N2 = Convert.ToInt32(Console.ReadLine());
 
 
-int number1 = Convert.ToInt32(Console.ReadLine());
-int number2 = Convert.ToInt32(Console.ReadLine());
-
-int result = namber2 * namber2;
-
-if (result == namber1){
-    Console.WriteLine("Да");
+if (N1 > N2){
+    Console.WriteLine("Первое число больше");
 }else{
-    Console.WriteLine("Нет");
+    Console.WriteLine("Второе число больше");
+}
+
+//Задача 4
+Console.WriteLine("Введите первое число:");
+N1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите второе число:");
+N2 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите третье число:");
+int N3 = Convert.ToInt32(Console.ReadLine());
+
+if (N1 > N2){
+    if(N1 > N3){
+        Console.WriteLine("Первое число больше");
+    }else{
+        Console.WriteLine("Третье число больше");
+    }
+}else{
+    if(N2 > N3){
+        Console.WriteLine("Второе число больше");
+    }else{
+        Console.WriteLine("Третье число больше");
+    }
+}
+
+//Задача 6
+Console.WriteLine("Введите число:");
+N1 = Convert.ToInt32(Console.ReadLine());
+
+if(N1 % 2 == 0){
+    Console.WriteLine("Четное");
+}else{
+    Console.WriteLine("Не четное");
 }
 
 
+//Задача 8
+Console.WriteLine("Введите число N:");
+N1 = Convert.ToInt32(Console.ReadLine());
 
-int day = Convert.ToInt32(Console.ReadLine());
-
-if (day == 1){
-    Console.WriteLine("Понедельник");
-}
-else if (day == 2){
-    Console.WriteLine("Вторник");
-}
-else if (day == 3){
-    Console.WriteLine("Среда");
-}
-else if (day == 4){
-    Console.WriteLine("Четверг");
-}
-else if (day == 5){
-    Console.WriteLine("Пятница");
-}
-else if (day == 6){
-    Console.WriteLine("Суббота");
-}
-else if (day == 7){
-    Console.WriteLine("Воскресенье");
-}
-else{
-    Console.WriteLine("Такого дня нет");
+for (int i = 0; i <= N1; i++){
+    Console.Write(i);
+    Console.Write(" ");
 }
