@@ -1,40 +1,27 @@
-﻿//Задача 26
-// Console.WriteLine("Введите число N: ");
-// bool isNumber = int.TryParse(Console.ReadLine(), out int N);
+//Задача 26
+Console.WriteLine("Введите число N: ");
+bool isNumber = int.TryParse(Console.ReadLine(), out int N);
 
-// if (!isNumber)
-// {
-//     Console.WriteLine("Не число");
-//     return;
-// }
+if (!isNumber)
+{
+    Console.WriteLine("Не число");
+    return;
+}
 
-// int GetLenNumber(int number)
-// {
-//     int count = 0;
-//     if(number == 0)
-//     {
-//         return 1;
-//     }
+int GetLenNumber(int number)
+{
+    int count = 0;
 
-//     while(number != 0)
-//     {
-//         count++;
-//         number = number / 10;
-//         //Console.WriteLine(number);
-//     }
-
-//     Console.WriteLine(Convert.ToBoolean(5));
-//     Console.WriteLine(Convert.ToBoolean(-1));
-//     Console.WriteLine(Convert.ToBoolean(0));
-//     Console.WriteLine(Convert.ToBoolean(9));
-//     Console.WriteLine(Convert.ToBoolean(3452));
-//     Console.WriteLine(Convert.ToBoolean("true"));
-//     Console.WriteLine(Convert.ToBoolean("false"));
-//     return count;
-
-// }
-// int result = GetLenNumber(N);
-// Console.WriteLine(result);
+    while(number > 0)
+    {
+        count++;
+        number = number / 10;
+        //Console.WriteLine(number);
+    }
+    return count;
+}
+int result = GetLenNumber(N);
+Console.WriteLine(result);
 
 
 
@@ -50,11 +37,6 @@
 
 // int GetPrNumber(int number)
 // {
-//     if(number < 1)
-//     {
-//         return 0;
-//     }
-
 //     int result = 1;
 //     for(int i = 1; i <= number; i++)
 //     {
@@ -69,33 +51,33 @@
 
 //Задача 30
 
-void PrintSqares(int[] sqares)
-{
-    int i = 0;
-    int Len = sqares.Length;
-    while (i < Len)
-    {
-        Console.Write($" {sqares[i]}");
-        i++;
-    }
-}
+// void PrintSqares(int[] sqares)
+// {
+//     int i = 0;
+//     int Len = sqares.Length;
+//     while (i < Len)
+//     {
+//         Console.WriteLine(sqares[i]);
+//         i++;
+//     }
+// }
 
-int[] GenrArrey(int N)
-{
-    int[] arr = new int[N];
+// int[] GenrArrey(int N)
+// {
+//     int[] arr = new int[N];
 
-    Random random = new Random();
+//     Random random = new Random();
 
-    int number = random.Next(0, 2);
+//     int number = random.Next(0, 2);
 
-    for (int i = 0; i < N; i++)
-    {
-        arr[i] = random.Next(0, 2);
-    }
-    return arr;
-}
+//     for(int i = 0; i < N; i++)
+//     {
+//         arr[i] = random.Next(0, 2);
+//     }
+//     return arr;
+// }
 
-PrintSqares(GenrArrey(8));
+// PrintSqares(GenrArrey(8));
 
 
 
