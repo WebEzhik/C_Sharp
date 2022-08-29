@@ -30,6 +30,8 @@ int result = GetDegree(a, b);
 Console.WriteLine(result);
 
 
+
+
 //Задача 27
 // Console.WriteLine("Введите число N: ");
 // bool isNumber = int.TryParse(Console.ReadLine(), out int n);
@@ -54,6 +56,7 @@ Console.WriteLine(result);
 // int result = GetSumNumber(n);
 
 // Console.WriteLine(result);
+
 
 
 
