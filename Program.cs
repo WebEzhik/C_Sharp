@@ -1,112 +1,252 @@
-﻿//Задача 25
-Console.WriteLine("Введите число А: ");
-bool isNumber1 = int.TryParse(Console.ReadLine(), out int a);
+﻿
+#nullable disable
 
-Console.WriteLine("Введите число B: ");
-bool isNumber2 = int.TryParse(Console.ReadLine(), out int b);
+//Задача 35
 
-if (!isNumber1 || !isNumber2)
+// int[] FillArray(int length)
+// {
+//     int[] array = new int[length];
+    
+//     Random random = new Random();
+//     for (int i = 0; i < length; i++)
+//     {
+//         array[i] = random.Next(0, 200);
+//     }
+//     return array;
+// }
+
+// // void PrintArray(int[] array)
+// // {
+// //     if(array.Length == 0)
+// //     {
+// //         Console.WriteLine("Что-то пошло не так");
+// //         return;
+// //     }
+// //     Console.Write("[");
+
+// //     for (int i = 0; i < array.Length - 1; i++)
+// //     {
+// //         Console.Write($"{array[i]},");
+// //     }
+
+// //     Console.Write(array[array.Length - 1]);
+// //     Console.Write("]");
+// // }
+
+// int SumArr(int[] array)
+// {
+    
+//     int result = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] > 9 && array[i] < 100)
+//         {
+//             result++;
+//         }
+//     }
+//     return result;
+// }
+
+
+// //Console.WriteLine("Enter length - ");
+// //bool isNumber = int.TryParse(Console.ReadLine(), out int length);
+
+// // if (!isNumber || length <= 0)
+// // {
+// //     Console.WriteLine("Invalid number");
+// //     return;
+// // }
+
+// int length = 123;
+
+// int[] array = FillArray(length);
+// //PrintArray(array);
+
+// int result = SumArr(array);
+
+// Console.Write($"Количество элементов: {result}");
+
+
+
+
+
+
+
+
+
+
+
+
+int[] FillArray(int length)
 {
-    Console.WriteLine("Не число");
-    return;
+    int[] array = new int[length];
+    
+    Random random = new Random();
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = random.Next(-10, 10);
+    }
+    return array;
 }
 
-int GetDegree(int A, int B)
+void PrintArray(int[] array)
 {
-    if(B == 0)
+    if(array.Length == 0)
     {
-        return 1;
+        Console.WriteLine("Что-то пошло не так");
+        return;
+    }
+    Console.Write("[");
+
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        Console.Write($"{array[i]},");
+    }
+
+    Console.Write(array[array.Length - 1]);
+    Console.Write("]");
+}
+
+int[] SumArr(int[] array)
+{
+    int[] sums;
+
+    if(array.Length % 2 == 1)
+    {
+        sums = new int[array.Length / 2 + 1];
+    }
+    else{
+        sums = new int[array.Length / 2];
     }
     
-    int result = 1;
-    for(int i = 1; i <= B; i++)
+
+    for (int i = 0; i < array.Length / 2 + 1; i++)
     {
-        result = result * A;
+        if(i != (array.Length - 1 - i))
+        {
+            sums[i] = array[i] * array[array.Length - 1 - i];
+        }
     }
-    return result;
+    return sums;
 }
 
-int result = GetDegree(a, b);
-Console.WriteLine(result);
 
+//Console.WriteLine("Enter length - ");
+//bool isNumber = int.TryParse(Console.ReadLine(), out int length);
 
-
-
-//Задача 27
-// Console.WriteLine("Введите число N: ");
-// bool isNumber = int.TryParse(Console.ReadLine(), out int n);
-
-// if (!isNumber)
+// if (!isNumber || length <= 0)
 // {
-//     Console.WriteLine("Не число");
+//     Console.WriteLine("Invalid number");
 //     return;
 // }
 
-// int GetSumNumber(int number)
+int length = 5;
+
+int[] array = FillArray(length);
+PrintArray(array);
+Console.WriteLine();
+PrintArray(SumArr(array));
+
+
+//Console.Write($"Количество элементов: {result}");
+
+
+
+
+
+
+
+
+
+
+
+
+//Задайте массив из 12 элементов, заполненный случайными числами из
+// промежутка [-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
+//Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29, сумма отрицательных равна -20.
+
+// Console.WriteLine("Enter length - ");
+
+
+
+// bool isNumber = int.TryParse(Console.ReadLine(), out int length);
+// if (!isNumber || length <= 0)
 // {
-//     int sum = 0;
-//     while(number != 0)
-//     {
-//         sum = sum + (number % 10);
-//         number = number / 10;
-//         //Console.WriteLine(number);
-//     }
-//     return sum;
+//     Console.WriteLine("Invalid number");
+//     return;
 // }
-// int result = GetSumNumber(n);
 
-// Console.WriteLine(result);
+// int[] array = FillArray(length);
+// PrintArray(array);
 
+// int sumPositiveNumber = GetSumPositiveNumberInArray(array);
 
+// Console.WriteLine($"sum Positive Number - {sumPositiveNumber}");
 
+// int sumNegativeNumber = GetSumNegativeNumberInArray(array);
 
-//Задача 29
+// Console.WriteLine($"sum negative Number - {sumNegativeNumber}");
 
-// void PrintSqares(int[] sqares)
+// int GetSumNegativeNumberInArray(int[] array)
 // {
-//     int i = 0;
-//     int Len = sqares.Length;
-//     while (i < Len)
+//     int sumNegativeNumber = 0;
+//     for (int i = 0; i < array.Length; i++)
 //     {
-//         Console.Write($" {sqares[i]}");
-//         i++;
-//     }
-// }
-
-// int[] GenrArrey(int N)
-// {
-//     int[] arr = new int[N];
-
-//     for (int i = 0; i < N; i++)
-//     {
-//         Console.WriteLine($"Введите {i+1} элемент массива: ");
-
-//         bool isNumber = int.TryParse(Console.ReadLine(), out int n);
-
-//         if (!isNumber)
+//         if(array[i] < 0)
 //         {
-//             Console.WriteLine("Не число");
-//             i--;
-//         }
-//         else{
-//             arr[i] = n;
+//             sumNegativeNumber += array[i];
 //         }
 //     }
-//     return arr;
+
+//     return sumNegativeNumber;
 // }
 
-// Console.WriteLine("Введите размерность массива: ");
-// bool isNumber = int.TryParse(Console.ReadLine(), out int n);
 
-// if (!isNumber)
+
+// int GetSumPositiveNumberInArray(int[] array)
 // {
-//     Console.WriteLine("Не число");
-//     return;
+//     int sumPositiveNumber = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] >= 0)
+//         {
+//          sumPositiveNumber += array[i];
+//         }
+//     }
+
+//     return sumPositiveNumber;
 // }
-// PrintSqares(GenrArrey(n));
 
 
 
 
 
+// void PrintArray(int[] array)
+// {
+//     if(array.Length == 0)
+//     {
+//         Console.WriteLine("Что-то пошло не так");
+//         return;
+//     }
+//     Console.Write("[");
 
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         Console.Write($"{array[i]},");
+//     }
+
+//     Console.Write(array[array.Length - 1]);
+//     Console.Write("]");
+// }
+
+// int[] FillArray(int length)
+// {
+//     int[] array = new int[length];
+    
+//     Random random = new Random();
+//     for (int i = 0; i < length; i++)
+//     {
+//         array[i] = random.Next(-9, 10);
+//     }
+//     return array;
+// }
