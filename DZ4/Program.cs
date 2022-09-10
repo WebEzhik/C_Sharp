@@ -1,4 +1,4 @@
-//Задача 25
+﻿//Задача 25
 // Console.WriteLine("Введите число А: ");
 // bool isNumber1 = int.TryParse(Console.ReadLine(), out int a);
 
