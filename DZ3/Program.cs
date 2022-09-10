@@ -1,4 +1,4 @@
-// Задача 19
+﻿// Задача 19
 Console.WriteLine("Введите пятизначное N: ");
 bool isNumber = int.TryParse(Console.ReadLine(), out int N);
 

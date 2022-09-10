@@ -1,4 +1,4 @@
-
+﻿
 //Задача 34
 // int[] FillArray(int length)
 // {

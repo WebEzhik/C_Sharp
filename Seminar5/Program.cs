@@ -1,4 +1,4 @@
-
+﻿
 #nullable disable
 
 //Задача 35
