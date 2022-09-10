@@ -61,10 +61,10 @@
 
 // int[] GetFib(int N)
 // {
-    
+
 //     int[] result = new int[N];
 //     result[0] = 0;
-    
+
 //     if(N<2)
 //     {
 //         return result;
@@ -117,7 +117,7 @@
 int[] FillArray(int length)
 {
     int[] array = new int[length];
-    
+
     Random random = new Random();
     for (int i = 0; i < length; i++)
     {
@@ -148,7 +148,7 @@ int[] CopyArray(int[] array)
 {
     int[] array2 = new int[array.Length];
 
-    for(int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         array2[i] = array[i];
     }
