@@ -256,93 +256,225 @@
 //Задача 60
 
 
+// Console.Write("Введите размерность x: ");
+// bool isNumber1 = int.TryParse(Console.ReadLine(), out int x);
+
+// Console.Write("Введите размерность y: ");
+// bool isNumber2 = int.TryParse(Console.ReadLine(), out int y);
+
+// Console.Write("Введите размерность z: ");
+// bool isNumber3 = int.TryParse(Console.ReadLine(), out int z);
+
+// if (!isNumber1 || x <= 0 || y <= 0 || z <= 0 || !isNumber2 || !isNumber3)
+// {
+//     Console.WriteLine("Invalid number");
+//     return;
+// }
+// Console.WriteLine();
+
+// if (x * y * z > 90)
+// {
+//     Console.WriteLine("Слишком большой массив.");
+//     Environment.Exit(0);
+// }
+
+// int[,,] result = CreateRandomArray3D(x, y, z);
+// Print3DArray(result);
+// Console.WriteLine();
+
+// Print3DArrayIndex(result);
+
+
+
+// void Print3DArrayIndex(int[,,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < array.GetLength(2); k++)
+//             {
+//                 Console.Write($"{array[i, j, k]}({i},{j},{k}) ");
+//             }
+//             Console.WriteLine();
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+// void Print3DArray(int[,,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < array.GetLength(2); k++)
+//             {
+//                 Console.Write($"{array[i, j, k]} ");
+//             }
+//             Console.WriteLine();
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int[,,] CreateRandomArray3D(int x, int y, int z)
+// {
+//     int[,,] array = new int[x, y, z];
+
+//     Random random = new Random();
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < array.GetLength(2); k++)
+//             {
+//                 int N = random.Next(10, 100);
+
+//                 while (getUnicNumbers(array, N))
+//                 {
+//                     N = random.Next(10, 100);
+//                 }
+
+//                 array[i, j, k] = N;
+//             }
+//         }
+//     }
+
+//     return array;
+// }
+
+// bool getUnicNumbers(int[,,] array, int N)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < array.GetLength(2); k++)
+//             {
+//                 if (array[i, j, k] == N)
+//                 {
+//                     return true;
+//                 }
+//             }
+//         }
+//     }
+//     return false;
+// }
+
+
+//Задача 62
+
 Console.Write("Введите размерность x: ");
 bool isNumber1 = int.TryParse(Console.ReadLine(), out int x);
 
-Console.Write("Введите размерность y: ");
-bool isNumber2 = int.TryParse(Console.ReadLine(), out int y);
 
-Console.Write("Введите размерность z: ");
-bool isNumber3 = int.TryParse(Console.ReadLine(), out int z);
-
-if (!isNumber1 || x <= 0 || y <= 0 || z <= 0 || !isNumber2 || !isNumber3)
+if (!isNumber1 || x <= 0)
 {
     Console.WriteLine("Invalid number");
     return;
 }
-
-Console.WriteLine();
-int[,,] result = CreateRandomArray3D(x, y, z);
-
-Print3DArray(result);
-
 Console.WriteLine();
 
+Print2DArray(GetSpire(x));
+
+int[,] GetSpire(int n)
+{
+    int[,] result = new int[n, n];
+    int num = 1;
+
+    //Заполнение периметра
+    for (int y = 0; y < n; y++)
+    {
+        result[0, y] = num;
+        num++;
+    }
+    for (int x = 1; x < n; x++)
+    {
+        result[x, n - 1] = num;
+        num++;
+    }
+    for (int y = n - 2; y >= 0; y--)
+    {
+        result[n - 1, y] = num;
+        num++;
+    }
+    for (int x = n - 2; x > 0; x--)
+    {
+        result[x, 0] = num;
+        num++;
+    }
+
+    //координаты следующей ячейка
+    int c = 1;
+    int d = 1;
+
+    while (num < n * n)
+    {
+
+        while (result[c, d + 1] == 0)
+        {
+            result[c, d] = num;
+            num++;
+            d++;
+        }
+
+        while (result[c + 1, d] == 0)
+        {
+            result[c, d] = num;
+            num++;
+            c++;
+        }
+
+        while (result[c, d - 1] == 0)
+        {
+            result[c, d] = num;
+            num++;
+            d--;
+        }
+
+        while (result[c - 1, d] == 0)
+        {
+            result[c, d] = num;
+            num++;
+            c--;
+        }
+    }
+
+    //Заполнение центра
+    for (int x = 0; x < n; x++)
+    {
+        for (int y = 0; y < n; y++)
+        {
+            if (result[x, y] == 0)
+            {
+                result[x, y] = num;
+            }
+        }
+    }
+
+    return result;
+}
 
 
-
-
-
-
-
-void Print3DArray(int[,,] array)
+void Print2DArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = 0; k < array.GetLength(2); k++)
+            if (array[i, j] < 10)
             {
-                Console.Write($"{array[i, j, k]} ");
+                Console.Write($"0{array[i, j]} ");
             }
-            Console.WriteLine();
+            else
+            {
+                Console.Write($"{array[i, j]} ");
+            }
+
         }
         Console.WriteLine();
     }
-}
-
-int[,,] CreateRandomArray3D(int x, int y, int z)
-{
-    int[,,] array = new int[x, y, z];
-
-    Random random = new Random();
-
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            for (int k = 0; k < array.GetLength(2); k++)
-            {
-                int N = random.Next(99, 1000);
-
-                while (getUnicNumbers(array, N))
-                {
-                    N = random.Next(99, 1000);
-                }
-
-                array[i, j, k] = N;
-            }
-        }
-    }
-
-    return array;
-}
-
-bool getUnicNumbers(int[,,] array, int N)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            for (int k = 0; k < array.GetLength(2); k++)
-            {
-                if(array[i,j,k] != N)
-                {
-                    return true;
-                }
-            }
-        }
-    }
-
-    return false;
 }
