@@ -1,0 +1,15 @@
+D:\C_Sharp\dz28\bin\Debug\net6.0\dz28.exe
+D:\C_Sharp\dz28\bin\Debug\net6.0\dz28.deps.json
+D:\C_Sharp\dz28\bin\Debug\net6.0\dz28.runtimeconfig.json
+D:\C_Sharp\dz28\bin\Debug\net6.0\dz28.dll
+D:\C_Sharp\dz28\bin\Debug\net6.0\dz28.pdb
+D:\C_Sharp\dz28\obj\Debug\net6.0\dz28.csproj.AssemblyReference.cache
+D:\C_Sharp\dz28\obj\Debug\net6.0\dz28.GeneratedMSBuildEditorConfig.editorconfig
+D:\C_Sharp\dz28\obj\Debug\net6.0\dz28.AssemblyInfoInputs.cache
+D:\C_Sharp\dz28\obj\Debug\net6.0\dz28.AssemblyInfo.cs
+D:\C_Sharp\dz28\obj\Debug\net6.0\dz28.csproj.CoreCompileInputs.cache
+D:\C_Sharp\dz28\obj\Debug\net6.0\dz28.dll
+D:\C_Sharp\dz28\obj\Debug\net6.0\refint\dz28.dll
+D:\C_Sharp\dz28\obj\Debug\net6.0\dz28.pdb
+D:\C_Sharp\dz28\obj\Debug\net6.0\dz28.genruntimeconfig.cache
+D:\C_Sharp\dz28\obj\Debug\net6.0\ref\dz28.dll
