@@ -244,110 +244,110 @@
 //Задача 59
 
 
-Console.Write("Введите размерность m: ");
-bool isNumber1 = int.TryParse(Console.ReadLine(), out int m);
+// Console.Write("Введите размерность m: ");
+// bool isNumber1 = int.TryParse(Console.ReadLine(), out int m);
 
-Console.Write("Введите размерность n: ");
-bool isNumber2 = int.TryParse(Console.ReadLine(), out int n);
+// Console.Write("Введите размерность n: ");
+// bool isNumber2 = int.TryParse(Console.ReadLine(), out int n);
 
-if (!isNumber1 || n <= 0 || m <= 0 || !isNumber2)
-{
-    Console.WriteLine("Invalid number");
-    return;
-}
+// if (!isNumber1 || n <= 0 || m <= 0 || !isNumber2)
+// {
+//     Console.WriteLine("Invalid number");
+//     return;
+// }
 
-Console.WriteLine();
-int[,] result = CreateRandomArray(m, n);
-Print2DArray(result);
+// Console.WriteLine();
+// int[,] result = CreateRandomArray(m, n);
+// Print2DArray(result);
 
-Console.WriteLine();
+// Console.WriteLine();
 
-int[] minArr = FindMin(result);
-PrintArray(minArr);
-
-
-
-int[,] resultArr = DelRowCol(result, minArr);
-
-int[,] DelRowCol(int[,] array, int[] minArr)
-{
-    int[] resultArr = new int[array.GetLength(0)-1, array.GetLength(0)-1];
-    resultArrI = 0;
-    resultArrJ = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-
-        }
-
-    }
-}
-
-int[] FindMin(int[,] array)
-{
-    int min = array[0, 0];
-    int[] minInd = new int[2];
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (min < array[i, j])
-            {
-                min = array[i, j];
-                minInd[0] = i;
-                minInd[1] = j;
-            }
-        }
-    }
-    return minInd;
-}
+// int[] minArr = FindMin(result);
+// PrintArray(minArr);
 
 
 
-void Print2DArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($"{array[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-}
+// int[,] resultArr = DelRowCol(result, minArr);
 
-int[,] CreateRandomArray(int m, int n)
-{
-    int[,] array = new int[m, n];
+// int[,] DelRowCol(int[,] array, int[] minArr)
+// {
+//     int[] resultArr = new int[array.GetLength(0)-1, array.GetLength(0)-1];
+//     resultArrI = 0;
+//     resultArrJ = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
 
-    Random random = new Random();
+//         }
 
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = random.Next(0, 10);
-        }
-    }
+//     }
+// }
 
-    return array;
-}
+// int[] FindMin(int[,] array)
+// {
+//     int min = array[0, 0];
+//     int[] minInd = new int[2];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (min < array[i, j])
+//             {
+//                 min = array[i, j];
+//                 minInd[0] = i;
+//                 minInd[1] = j;
+//             }
+//         }
+//     }
+//     return minInd;
+// }
 
-void PrintArray(int[] array)
-{
-    if (array.Length == 0)
-    {
-        Console.WriteLine("Что-то пошло не так");
-        return;
-    }
-    Console.Write("[");
 
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        Console.Write($"{array[i]},");
-    }
 
-    Console.Write(array[array.Length - 1]);
-    Console.Write("]");
-}
+// void Print2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"{array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int[,] CreateRandomArray(int m, int n)
+// {
+//     int[,] array = new int[m, n];
+
+//     Random random = new Random();
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = random.Next(0, 10);
+//         }
+//     }
+
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     if (array.Length == 0)
+//     {
+//         Console.WriteLine("Что-то пошло не так");
+//         return;
+//     }
+//     Console.Write("[");
+
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         Console.Write($"{array[i]},");
+//     }
+
+//     Console.Write(array[array.Length - 1]);
+//     Console.Write("]");
+// }
