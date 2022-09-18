@@ -22,29 +22,29 @@
 //Задача 69. Возводит число А в степень В с помощью рекурсии
 
 //Проверка вводимого числа 
-Console.Write("Введите число: ");
-bool isNum_a = int.TryParse(Console.ReadLine(), out int a);
-Console.Write("Введите число: ");
-bool isNum_b = int.TryParse(Console.ReadLine(), out int b);
-if (!isNum_a || !isNum_b)
-{
-    Console.WriteLine("Ошибка ввода");
-    return;
-}
+// Console.Write("Введите число: ");
+// bool isNum_a = int.TryParse(Console.ReadLine(), out int a);
+// Console.Write("Введите число: ");
+// bool isNum_b = int.TryParse(Console.ReadLine(), out int b);
+// if (!isNum_a || !isNum_b)
+// {
+//     Console.WriteLine("Ошибка ввода");
+//     return;
+// }
 
 
 
-int GetDegreeNumber(int a, int b, int i = 1)
-{
-    if (i <= b)
-    {
-        i++;
-        return a * GetDegreeNumber(a, b, i);
-    }
-    return 1;
-}
+// int GetDegreeNumber(int a, int b, int i = 1)
+// {
+//     if (i <= b)
+//     {
+//         i++;
+//         return a * GetDegreeNumber(a, b, i);
+//     }
+//     return 1;
+// }
 
-Console.WriteLine(GetDegreeNumber(a, b));
+// Console.WriteLine(GetDegreeNumber(a, b));
 
 
 //Вывести значения от М до N
