@@ -1,0 +1,15 @@
+D:\C_Sharp\DZ_9\bin\Debug\net6.0\DZ_9.exe
+D:\C_Sharp\DZ_9\bin\Debug\net6.0\DZ_9.deps.json
+D:\C_Sharp\DZ_9\bin\Debug\net6.0\DZ_9.runtimeconfig.json
+D:\C_Sharp\DZ_9\bin\Debug\net6.0\DZ_9.dll
+D:\C_Sharp\DZ_9\bin\Debug\net6.0\DZ_9.pdb
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\DZ_9.csproj.AssemblyReference.cache
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\DZ_9.GeneratedMSBuildEditorConfig.editorconfig
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\DZ_9.AssemblyInfoInputs.cache
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\DZ_9.AssemblyInfo.cs
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\DZ_9.csproj.CoreCompileInputs.cache
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\DZ_9.dll
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\refint\DZ_9.dll
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\DZ_9.pdb
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\DZ_9.genruntimeconfig.cache
+D:\C_Sharp\DZ_9\obj\Debug\net6.0\ref\DZ_9.dll
